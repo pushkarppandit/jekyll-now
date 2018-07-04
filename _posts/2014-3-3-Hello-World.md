@@ -2,8 +2,8 @@
 layout: post
 title: First Post!
 ---
-##NOW!
-###here is something
+## NOW!
+### here is something
 
 Stay tuned for more
 
