@@ -7,4 +7,4 @@ title: First Post!
 
 Stay tuned for more
 
-![_config.yml]({{ site.baseurl }}/images/saitama.jpg)
+![saitama]({{ site.baseurl }}/images/saitama.jpg)
