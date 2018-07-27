@@ -24,7 +24,7 @@ def transform_tree_to_coord(tree_lines):
     return(tree_transf)
 ```
 
-The function 'binary_tree' is used to define a tree. Each tree is defined as a set of segments, with the segments defined recursively starting from the main trunk. Each segment is defined like a vector by $(x,y)$ coordinates for a point and $(l,\theta)$ for a length and direction.
+The function `binary_tree` is used to define a tree. Each tree is defined as a set of segments, with the segments defined recursively starting from the main trunk. Each segment is defined like a vector by $(x,y)$ coordinates for a point and $(l,\theta)$ for a length and direction. These are captured in the parameter `seed` which is `[[x,y],[l,theta]]`
 
 
 ![saitama]({{ site.baseurl }}/images/saitama.jpg)
