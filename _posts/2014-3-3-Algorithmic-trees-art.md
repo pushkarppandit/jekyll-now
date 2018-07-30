@@ -138,10 +138,10 @@ ax.autoscale()
 ```
 
 You can get some really nice looking groves:
-![random forest 1]({{ site.baseurl }}/images/trees/Random forest 5.png)
-![random forest 2]({{ site.baseurl }}/images/trees/Random forest 7.png)
-![random forest 3]({{ site.baseurl }}/images/trees/Random forest 9.png)
-![random forest 4]({{ site.baseurl }}/images/trees/Random forest 16.png)
+![random forest 1]({{ site.baseurl }}/images/trees/random forest 5.png)
+![random forest 2]({{ site.baseurl }}/images/trees/random forest 7.png)
+![random forest 3]({{ site.baseurl }}/images/trees/random forest 9.png)
+![random forest 4]({{ site.baseurl }}/images/trees/random forest 16.png)
 
 ### What next?
 
