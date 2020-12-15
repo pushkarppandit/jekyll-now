@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Algorithmically generating natural looking trees
-tags: algorithmic art trees render rendering recursive nature fractal
+tags: algorithmic art trees render rendering recursive nature fractal l-systems 
 ---
+Note: Realized later on that what I was doing is procedurally generating tree graphics using L-systems. Didn't know it at the time.
+
 ### Symmetric Binary Trees
 Reading [this](http://www.nbtindia.gov.in/books_detail__11__popular-science__1074__chaos-fractals-and-self-organisation.nbt) excellent book got me thinking on fractals in nature and how many natural structures could be modeled as neat self-referencing structures. I decided to try my hand at visually representing the most obvious choice for fractal structures in nature, which is trees, using python. 
 
