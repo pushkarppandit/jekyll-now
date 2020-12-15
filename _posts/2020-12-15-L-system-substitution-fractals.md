@@ -82,13 +82,17 @@ subs_dict_koch = {0:[0,1,5,0],
              5:[5,0,4,5]
             }
 ```
-Let's see what this substitution rule does to a simple [0] word ((0,0) to (1,0)) in some iterations:
-![Koch Snowflake, 1 step]({{ site.baseurl }}/images/substitution_rules/koch_1step.png)
-![Koch Snowflake, 2 steps]({{ site.baseurl }}/images/substitution_rules/koch_2step.png)
-![Koch Snowflake, 8 steps]({{ site.baseurl }}/images/substitution_rules/koch_8step.png)
+Let's see what this substitution rule does to a simple \[0\] word ((0,0) to (1,0)) in some iterations:
+![koch_1step]({{ site.baseurl }}/images/substitution_rules/koch_1step.png)
+*Koch Snowflake, 1 step*
+![koch_2step]({{ site.baseurl }}/images/substitution_rules/koch_2step.png)
+*Koch Snowflake, 2 steps*
+![koch_8step]({{ site.baseurl }}/images/substitution_rules/koch_8step.png)
+*Koch Snowflake, 8 steps*
 
-Now, if we start from a hexagon word ([0,1,2,3,4,5]) what does this give us? A snowflake indeed!
-![Koch Snowflake, 5 steps starting from a hexagon]({{ site.baseurl }}/images/substitution_rules/koch_5step_6.png)
+Now, if we start from a hexagon word (\[0,1,2,3,4,5\]) what does this give us? A snowflake indeed!
+![koch_5step_6]({{ site.baseurl }}/images/substitution_rules/koch_5step_6.png)
+*Koch Snowflake, 5 steps starting from a hexagon*
 
 #### Z-rule
 Let's try substituting each letter with an inverted "Z" shape. For the purposes of this post, let me call this a "z-rule". The rules will be as follows:
@@ -103,10 +107,30 @@ subs_dict_1 = {0:[0,2,0],
 ```
 What does this look like?
 
-![Z-rule, 1 step starting from [0]]({{ site.baseurl }}/images/substitution_rules/z_1step.png)
-![Z-rule, 2 steps starting from [0]]({{ site.baseurl }}/images/substitution_rules/z_2step.png)
-![Z-rule, 8 steps starting from [0]]({{ site.baseurl }}/images/substitution_rules/z_8step.png)
-![Z-rule, 10 steps starting from [0]]({{ site.baseurl }}/images/substitution_rules/z_10step.png)
+![z_1step]({{ site.baseurl }}/images/substitution_rules/z_1step.png)
+*Z-rule, 1 step starting from [0]*
+![z_2step]({{ site.baseurl }}/images/substitution_rules/z_2step.png)
+*Z-rule, 2 steps starting from [0]*
+![z_8step]({{ site.baseurl }}/images/substitution_rules/z_8step.png)
+*Z-rule, 8 steps starting from [0]*
+![z_10step]({{ site.baseurl }}/images/substitution_rules/z_10step.png)
+*Z-rule, 10 steps starting from [0]*
 
-Now let's try starting from a different word, say [0,2,4], a triangle.
-![Z-rule, 9 steps starting from [0,2,4]]({{ site.baseurl }}/images/substitution_rules/z_9step_3_alt.png)
+Now let's try starting from a different word, say \[0,2,4\], a triangle.
+![z_9step_3_alt]({{ site.baseurl }}/images/substitution_rules/z_9step_3_alt.png)
+*Z-rule, 9 steps starting from [0,2,4]*
+
+#### Half-Hexagon rule
+Let's try another substitution rule. I call this the "half hexagon". This time I'm defining a set of rules using a pattern, instead of hardcoding it. This should work because the substitution rules have been symmetric (so far!). Assymetric rules should also be possible using patterns, although it would probably be easier to just write it out than work out the pattern.
+```python
+subs_dict_3 = {i:[(i+1)%6,(i+2)%6,(i+3)%6] for i in range(6)}
+```
+
+![halfhex_1step]({{ site.baseurl }}/images/substitution_rules/halfhex_1step.png)
+*Half-hexagon rule, 1 step starting from [0]*
+![halfhex_8step]({{ site.baseurl }}/images/substitution_rules/halfhex_8step.png)
+*Half-hexagon rule, 8 steps starting from [0]*
+If we combine two of these together, we get a neat little fractal hexagon. Notice the self-similar shapes inside each side of the hexagon. The almost hexagonal shapes inside them have similar patterns at a smaller scale! If we keep going to infinity these will keep going in a fractal manner.
+
+![halfhex_8step_2_opp]({{ site.baseurl }}/images/substitution_rules/halfhex_8step_2_opp.png)
+*Half-hexagon rule, 8 steps starting from [0,3]*
